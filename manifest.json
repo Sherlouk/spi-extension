@@ -1,0 +1,14 @@
+{
+  "name": "Swift Package Index for GitHub",
+  "description": "Adds extra metadata to Swift package repositories on GitHub.",
+  "version": "1",
+  "manifest_version": 3,
+  "content_scripts": [{
+    "matches": ["https://github.com/*"],
+    "js": ["add-spi-box.js"]
+  }],
+  "host_permissions": [
+    "https://raw.githubusercontent.com/SwiftPackageIndex/PackageList/main/packages.json",
+    "https://img.shields.io/endpoint"
+  ]
+}
